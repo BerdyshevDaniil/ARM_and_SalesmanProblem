@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>arm</class>
+ <widget class="QMainWindow" name="arm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>924</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>arm</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">arm{
+background-color: rgb(200, 211, 193);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="3" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="add_meeting_btn">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(77, 101, 104);
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Добавить встречу</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="delete_meeting_btn">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(77, 101, 104);
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Удалить встречу</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="updateBtn">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(77, 101, 104);
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Обновить</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="1" column="0">
+       <widget class="QPushButton" name="insurence_company_btn">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(77, 101, 104);
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Страховые компании</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="clients_btn">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(77, 101, 104);
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Информация о клиентах</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(116, 162, 158);
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Расписание встреч&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QTableView" name="tableMeetingSchedule">
+        <property name="styleSheet">
+         <string notr="true">border-top-color: rgb(50, 150, 50);</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>924</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
