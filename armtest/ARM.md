@@ -19,4 +19,4 @@
 <img src="./ARM_files/АРМ.png">
 
 ## Исходный код
-Исходный код представлен в репозитории: 
+Исходный код представлен в репозитории: https://github.com/BerdyshevDaniil/ARM_and_SalesmanProblem/tree/main/armtest
