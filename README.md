@@ -2,7 +2,7 @@
 ## Отчеты
 
 - Отчет по автоматизированному рабочему месту АРМ: [АРМ](/armtest/ARM_files/АРМ.md)
-- Отчет по задаче Комивояжера: [Граф](/SalesmanProblem/KOMMI_files/Kommi.md)
+- Отчет по задаче Коммивояжера: [Граф](/SalesmanProblem/KOMMI_files/Kommi.md)
 
 ## Видео отчет
 Ссылка на YouTube: https://youtu.be/jWgQdlAoOqg
