@@ -29,8 +29,8 @@
 - <скриншоты>
 
 ## Диаграмма классов
-<img src="./ClassDiagram1.png">
-<img src="./ClassDiagram2.png">
+<img src="./class_diagram1.png">
+<img src="./class_diagram2.png">
 
 ## Исходный код
 Исходный код представлен в репозитории: https://github.com/BerdyshevDaniil/ARM_and_SalesmanProblem/tree/main/SalesmanProblem
