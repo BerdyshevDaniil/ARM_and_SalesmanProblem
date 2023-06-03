@@ -59,7 +59,8 @@
 *****
 
 ## Работа программы
-- <скриншоты>
+<img src="./visual13.png">
+<img src="./visual14.png">
 
 ## Диаграмма классов
 <img src="./class_diagram1.png">
