@@ -11,9 +11,8 @@ InsurenceCompany::InsurenceCompany(QWidget *parent) :
     ui(new Ui::InsurenceCompany)
 {
     ui->setupUi(this);
-    db = QSqlDatabase::addDatabase("QSQLITE");
-    //db.setHostName("127.0.0.1");
-    db.setDatabaseName("D:\\QT\\SQLiteStudio\\ARM"); // specify file directory
+    db = QSqlDatabase::addDatabase("QSQLITE"); // добавление бд
+    db.setDatabaseName("D:\\QT\\SQLiteStudio\\ARM"); // подключение к бд (установка имени)
     db.setUserName("root");
     db.setPassword("123456");
     if (!db.open()){
@@ -24,8 +23,8 @@ InsurenceCompany::InsurenceCompany(QWidget *parent) :
         qDebug() << "Successfully connected to the DB\n";
     }
 
-    model = new QSqlTableModel(this, db);
-    model->setTable("InsurenceCompanies");
+    model = new QSqlTableModel(this, db); // создание модели на основе созданной базы данных
+    model->setTable("InsurenceCompanies"); // установка нужной таблицы
     this->setupModel("InsurenceCompanies",
                      QStringList() << trUtf8("idCompany")
                                    << trUtf8("CompanyName")
@@ -98,9 +97,9 @@ void InsurenceCompany::setupBars(){
     gradient.setColorAt(1, QColor(70, 70, 70));
     ui->widget->setBackground(QBrush(gradient));
 
-    personal_insurence = new QCPBars(ui->widget->xAxis, ui->widget->yAxis);
-    liability_insurance = new QCPBars(ui->widget->xAxis, ui->widget->yAxis);
-    property_insurance = new QCPBars(ui->widget->xAxis, ui->widget->yAxis);
+    personal_insurence = new QCPBars(ui->widget->xAxis, ui->widget->yAxis);  // графики по
+    liability_insurance = new QCPBars(ui->widget->xAxis, ui->widget->yAxis); // каждому
+    property_insurance = new QCPBars(ui->widget->xAxis, ui->widget->yAxis); // типу страхования
 
     liability_insurance->setVisible(false);
     liability_insurance->setAntialiased(false);
@@ -110,7 +109,7 @@ void InsurenceCompany::setupBars(){
     liability_insurance->setBrush(QColor(250, 170, 20));
 
     property_insurance->setVisible(false);
-    property_insurance->setAntialiased(false); // gives more crisp, pixel aligned bar borders
+    property_insurance->setAntialiased(false);
     property_insurance->setStackingGap(1);
     property_insurance->setName("Property Insurance");
     property_insurance->setPen(QPen(QColor(111, 9, 176).lighter(170)));
@@ -125,7 +124,7 @@ void InsurenceCompany::setupBars(){
 
     // prepare x axis:
     ui->widget->xAxis->setLabel("Company");
-    QSqlQuery *query = new QSqlQuery(db);
+    QSqlQuery *query = new QSqlQuery(db); // данные из таблицы
     query->exec("SELECT InsurenceCompanies.idCompany FROM InsurenceCompanies");
     QVector<double> ticks;
     int i = 0;

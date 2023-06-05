@@ -12,10 +12,9 @@ AddClient::AddClient(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    db = QSqlDatabase::addDatabase("QSQLITE");
-    //db.setHostName("127.0.0.1"); //idk. it's local server
-    db.setDatabaseName("D:\\QT\\SQLiteStudio\\ARM"); // specify file directory
-    db.setUserName("root"); //idk still hehe
+    db = QSqlDatabase::addDatabase("QSQLITE"); // добавление бд
+    db.setDatabaseName("D:\\QT\\SQLiteStudio\\ARM"); // подключение к бд (установка имени)
+    db.setUserName("root");
     db.setPassword("123456");
     if (!db.open()){
         qDebug() << db.lastError().text();
@@ -25,11 +24,8 @@ AddClient::AddClient(QWidget *parent) :
         qDebug() << "Successfully connected to the DB\n";
     }
 
-    query = new QSqlQuery(db);
-    //query->exec("CREATE TABLE Clients(ID INT, ФИО TEXT, Phone INT);");
-
-    model = new QSqlTableModel(this, db);
-    model->setTable("Clients");
+    model = new QSqlTableModel(this, db); // создание модели на основе созданной базы данных
+    model->setTable("Clients"); // установка нужной таблицы
     this->setupModel("Clients",
                      QStringList() << trUtf8("ID")
                                    << trUtf8("                     Name                     ")
