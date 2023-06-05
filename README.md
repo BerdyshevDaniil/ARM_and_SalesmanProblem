@@ -5,4 +5,4 @@
 - Отчет по задаче Коммивояжера: [Граф](/SalesmanProblem/KOMMI_files/Kommi.md)
 
 ## Видео отчет
-Ссылка на YouTube: https://youtu.be/jWgQdlAoOqg
+Ссылка на YouTube: https://youtu.be/4SI1sy982LE
